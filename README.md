@@ -90,3 +90,29 @@ $ npm run webpack
 ```
 $ srart/open page.html
 ```
+8，将css文件也放在bundle.js里面
+
+首先需要在index.js里添加```import '../css/style.css'```
+然后在webpack.config.js添加css-loader,style-loader
+```
+ module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
+      }
+    ]
+  }
+```
+运行webpack
+
+```$ npm run webpack```
+
+会报错，提示```Can't resolve 'css-loader' ```
+
+出现这样的错误就直接
+```npm i css-loader```，```npm i style-loader```
+
+再次运行webpack
+
+就可以直接在page.html中引入一个dist/bundle.js就可以了添加css样式了。
