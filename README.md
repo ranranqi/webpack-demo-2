@@ -14,3 +14,4 @@ $ cd webpack-demo-2
 ```
 $ npm init -y
 ```
+4，创建文件```src/index.js```,```src/bar.js```, ```webpack.config.js```,```page.htm```
