@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack -w",
+    "webpack":"webpack"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/ranranqi/webpack-demo-2/issues"
   },
-  "homepage": "https://github.com/ranranqi/webpack-demo-2#readme"
+  "homepage": "https://github.com/ranranqi/webpack-demo-2#readme",
+  "devDependencies": {
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
+  }
 }
