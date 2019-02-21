@@ -116,3 +116,36 @@ $ srart/open page.html
 再次运行webpack
 
 就可以直接在page.html中引入一个dist/bundle.js就可以了添加css样式了。
+
+9，给css加前缀
+
+```
+ module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader','postcss-loader']  
+      }
+    ]
+  }
+```
+
+再添加postcss.config.js文件
+```
+module.exports = {
+    plugins: [
+      require('autoprefixer')
+    ]
+  }
+ ```
+
+在安装postcss-loader
+```
+npm i postcss-loader
+```
+安装
+```
+npm i autoprefixer
+```
+
+运行npm run webpack
