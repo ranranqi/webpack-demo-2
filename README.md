@@ -16,6 +16,51 @@ $ npm init -y
 ```
 4，创建文件```src/index.js```,```src/bar.js```, ```webpack.config.js```,```page.htm```
 
+src/index.js
+```
+import bar from './bar';
+
+bar();
+console.log('i am index.js')
+```
+
+src/bar.js
+```
+export default function bar() {
+  console.log('i am bar.js')
+}
+```
+webpack.config.js
+```
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
+  }
+};
+
+```
+
+page.html
+```
+<!doctype html>
+<html>
+  <head>
+  <title>webpack demo</title>
+  </head>
+  <body>
+    <div>
+      hello webpack
+    </div>
+    <script src="dist/bundle.js"></script>
+  </body>
+</html>
+```
+
+
 5，安装webpack
 ```
 $ npm i -D webpack
@@ -41,3 +86,7 @@ $ npm run webpack
 
 7，输入npm run webpack之后，命令会提示安装webpack-cli， yes/no  .
 直接yes就好了 ， 安装好之后就直接运行webpack了。
+8，打开page.html,查看效果
+```
+$ srart/open page.html
+```
