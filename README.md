@@ -99,7 +99,7 @@ $ srart/open page.html
     rules: [
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: [ 'style-loader', 'css-loader' ]  // 顺序： 先用css-loader将css文件变成js字符串，在用style-loader把js字符串变成style标签
       }
     ]
   }
