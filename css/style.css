@@ -1,11 +1,15 @@
+*{margin: 0;padding: 0;}
+*{box-sizing: border-box;}
 .out{
     border: 1px solid red;
     color: blue;
     font-size: 20px;
+    display: flex;
+    flex-direction: row;
 }
 .out .in{
     background: yellow;
-    font-size: 25px;
+    font-size: 40px;
     color: black;
-    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
 }

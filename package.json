@@ -19,10 +19,13 @@
   },
   "homepage": "https://github.com/ranranqi/webpack-demo-2#readme",
   "devDependencies": {
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3"
   },
   "dependencies": {
+    "autoprefixer": "^9.4.8",
     "css-loader": "^2.1.0",
     "style-loader": "^0.23.1"
   }
