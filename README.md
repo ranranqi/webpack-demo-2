@@ -149,3 +149,25 @@ npm i autoprefixer
 ```
 
 运行npm run webpack
+
+10，添加sass-loader
+
+```
+$ npm install sass-loader node-sass webpack --save-dev
+```
+再在webpack.config.js添加sass-loader
+```
+ module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader','postcss-loader' ]  
+      },
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader','sass-loader','postcss-loader']  
+      }
+    ]
+  }
+```
+
